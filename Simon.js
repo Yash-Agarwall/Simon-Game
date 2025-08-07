@@ -18,6 +18,16 @@ restart.addEventListener("click",()=>{
 });
 div.append(restart);
 
+document.addEventListener("click",()=>{
+    if(started==false){
+        started=true;
+        h3.innerText=`Game Started`;
+        levelUp();
+        restart.style.display = "inline-block";
+    }
+    
+});
+
 document.addEventListener("keypress",()=>{
     if(started==false){
         started=true;

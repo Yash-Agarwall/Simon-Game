@@ -11,8 +11,7 @@ body{
     align-items: center;
 }
 h1 {
-/*     color: #ff00aa; */
-    color: white;
+    color: #ff00aa;
     font-size: 3rem;
     margin-bottom: 0.5rem;
     text-shadow: 0 0 10px #ff00aa;
@@ -65,8 +64,38 @@ h3{
     opacity: 0.5;
     transform: scale(0.95);
 }
+#start{
+    display: none;
+    /* padding: 8px 16px; */
+    background-color: #e91e63;
+    color: white;
+    /* font-size: 3rem; */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 3rem;
+    transition: transform 0.2s;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+.material-symbols-outlined{
+    border-radius: 50%;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto auto; */
+    font-size: 2.5rem;
+}
+.material-symbols-outlined:hover{
+    transform: scale(1.17);
+    box-shadow: 0 0 15px #e91e63;
+}
 
-@media(max-width: 400px){
+@media(max-width: 450px){
+    #start{
+            display: block;
+    }
     .container{
         grid-template-columns: repeat(2,120px);
         grid-gap: 15px;

@@ -4,6 +4,17 @@ let started= false;
 let level=0;
 let button=["red","yellow","blue","green"];
 
+let start=document.querySelector("#start");
+start.addEventListener("click",()=>{
+    if(started==false){
+        started=true;
+        h3.innerText=`Game Started`;
+        levelUp();
+        restart.style.display = "inline-block";
+        start.style.display="none";
+    }
+    
+});
 
 let h3=document.querySelector("h3");
 let div=document.getElementById("restart");
@@ -15,18 +26,19 @@ restart.style.display="none";
 restart.addEventListener("click",()=>{
     reset();
     h3.innerText="Press any key to start";
+
 });
 div.append(restart);
 
-document.addEventListener("click",()=>{
-    if(started==false){
-        started=true;
-        h3.innerText=`Game Started`;
-        levelUp();
-        restart.style.display = "inline-block";
-    }
+// document.addEventListener("click",()=>{
+//     if(started==false){
+//         started=true;
+//         h3.innerText=`Game Started`;
+//         levelUp();
+//         restart.style.display = "inline-block";
+//     }
     
-});
+// });
 
 document.addEventListener("keypress",()=>{
     if(started==false){
@@ -89,6 +101,7 @@ function reset(){
     level=0;
     started=false;
     restart.style.display="none";
+    start.style.display="block";
 }
 
 

@@ -11,7 +11,8 @@ body{
     align-items: center;
 }
 h1 {
-    color: #ff00aa;
+/*     color: #ff00aa; */
+    color: white;
     font-size: 3rem;
     margin-bottom: 0.5rem;
     text-shadow: 0 0 10px #ff00aa;
